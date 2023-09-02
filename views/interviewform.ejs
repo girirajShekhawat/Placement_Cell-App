@@ -1,0 +1,38 @@
+
+<link rel="stylesheet" href="/css/signin.css">
+   <%- include('_header.ejs'); -%>
+<div class="container ">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card mt-5 bg-light">
+                <div class="card-body">
+                    <h1 class="card-title text-center">Schedule Interview</h1>
+                    <form action="/interview/create-interview" method="post">
+                        <div class="mb-3 mt-4">
+                            <label for="name" class="form-label">Name of student</label>
+                            <select name="id" id="name" class="form-select" required>
+                                <option selected disabled>Select Student</option>
+                                <% for(let student of students) { %>
+                                    <option value="<%= student._id %>"><%= student.name %></option>
+                                <% } %>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Company" class="form-label">Company</label>
+                            <input type="text" name="company" class="form-control" placeholder="Company Name" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Date</label>
+                            <input type="date" name="date" class="form-control" required>
+                        </div>
+                         <div class="text-center">
+                        <button type="submit" class="btn btn-success ">Schedule Interview</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

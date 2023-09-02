@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="/css/signin.css">
+ 
+<%- include('_header.ejs'); -%>
+   <div class="container mt-5 " >
+    <div class="row justify-content-center">
+      <div class="col-md-8 ">
+        <div class="card bg-light">
+          <div class="card-body">
+            <h1 class="card-title text-center">Student Form</h1>
+            <form action="/home/create-form" method="post">
+                <div class="mb-3">
+                    <label for="batch" class="form-label">Batch</label>
+                    <input type="text" name="batch" class="form-control" id="batch" placeholder="Enter batch details" required >
+                  </div>
+              <div class="mb-3">
+                <label for="fullName" class="form-label">Full Name</label>
+                <input type="text" name="name" class="form-control" id="fullName" placeholder="Enter full name" required >
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email"  name="email" class="form-control" id="email" placeholder="Enter email" required >
+              </div>
+              <div class="mb-3">
+                <label for="college" class="form-label">College</label>
+                <input type="text" name="college" class="form-control" id="college" placeholder="Enter college name" required >
+              </div>
+              <div class="mb-3">
+                <label for="placementStatus" class="form-label">Placement Status</label>
+                <select class="form-select" name="placementStatus" id="placementStatus" required >
+                  <option value="" selected>Select placement status</option>
+                  <option value="placed">Placed</option>
+                  <option value="not-placed">Not Placed</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="reactMarks" class="form-label">React Marks</label>
+                <input type="number" name="react" class="form-control" id="reactMarks" placeholder="Enter React marks out of 100" required >
+              </div>
+              <div class="mb-3">
+                <label for="dsaMarks" class="form-label">DSA Marks</label>
+                <input type="number" name="dsa" class="form-control" id="dsaMarks" placeholder="Enter DSA marks out of 100" required >
+              </div>
+              <div class="mb-3">
+                <label for="webDevMarks" class="form-label">Web Dev Marks</label>
+                <input type="number" name="webDev" class="form-control" id="webDevMarks" placeholder="Enter Web Dev marks out of 100" required >
+              </div>
+              
+              <button type="submit" class="btn btn-success w-100">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
