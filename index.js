@@ -1,6 +1,6 @@
 const express=require('express');
 const env=require('./config/environment');
-const port=env.port;
+const port=8000;
 //connecting the mongoose with the server
 const db=require('./config/mongoose');
 // use to make session cookie
@@ -33,7 +33,7 @@ app.use(layout);
 app.use(session({
     name:'Placement_cell',
     // to do change the seceret before deployment
-    secret: env.session_cookie_key,
+    secret:  'demo',
     resave: false,
     saveUninitialized: false,
     // cookie validation age
